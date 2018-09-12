@@ -3,9 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miniproyecto;
+package Model;
 
 import java.util.ArrayList;
+import Controller.IValidable;
 
 /**
  *
@@ -15,7 +16,8 @@ public class Alfabeto implements IValidable {
     String nombre;
     ArrayList<String> alfabeto;
     
-    public boolean validar (String frase){
+    @Override
+    public boolean validar (Object objeto){
         System.out.println("Clase Alfabeto, método Validar. Se verifica que la frase ingresada por el usuario sea compatible con el alfabeto activo");
         return true;
     }

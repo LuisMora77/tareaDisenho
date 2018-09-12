@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho;
+package Model;
+
+import Controller.DTO;
 
 /**
  *
- * @author Luis
+ * @author Monserrath
  */
-public interface IValidable {
+public interface IPersistencia {
     
-    public boolean validar(Object objeto);
+    public void escribir(DTO datos);
     
 }

@@ -3,21 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miniproyecto;
+package Model;
+
+import Controller.DTO;
 
 /**
  *
  * @author Usuario
  */
-public class Telefonico extends Algoritmo {
+public class Transposicion extends Algoritmo {
     
     @Override
     public void codificar(DTO dto){
-        System.out.println("Clase Telefonico, método Codificar. Codifica una frase según los datos que recibe en el dto");
+        System.out.println("Clase Transposicion, método Codificar. Codifica una frase según los datos que recibe en el dto");
     }
     @Override
     protected void decodificar(DTO dto){
-        System.out.println("Clase Telefonico, método Decodificar. Decodifica una frase según los datos que recibe en el dto");
+        System.out.println("Clase Transposicion, método Decodificar. Decodifica una frase según los datos que recibe en el dto");
     }
-    
 }
