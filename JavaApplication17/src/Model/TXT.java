@@ -21,7 +21,7 @@ public class TXT implements IPersistencia{
     public void escribir(DTO datos) {
         try{
             BufferedWriter archivo = new BufferedWriter(new FileWriter("bitacora.txt"));
-            String timeLog = new SimpleDateFormat("ddMMyyyy_HHmmss").format(Calendar.getInstance().getTime());
+            String timeLog = new SimpleDateFormat("dd:MM:yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
             archivo.write("Fecha de Peticion: " + timeLog);
             archivo.newLine();
             archivo.write("Frase original: " + datos.getFrase());
