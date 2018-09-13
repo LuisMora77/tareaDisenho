@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho;
+package tareadisenho.Model;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import javax.swing.JFrame;
+import tareadisenho.GUI;
 
 /**
  *
@@ -24,7 +25,8 @@ public class TareaDisenho {
         GUI ventana = new GUI();
         controller cont = new controller();
         cont.predefinirAlfabeto();
-        
+        cont.cargarAlfabetos();
+        cont.CargarAlgoritmos();
         //System.out.println(cont.getAlfabeto());
         
         ventana.setVisible(true);

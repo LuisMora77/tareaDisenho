@@ -5,6 +5,8 @@
  */
 package tareadisenho;
 
+import tareadisenho.Controller.DTO;
+import tareadisenho.Model.controller;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
@@ -217,6 +219,8 @@ public class GUI extends javax.swing.JFrame {
     
     
     //System.out.println();
+
+
    
     
     
