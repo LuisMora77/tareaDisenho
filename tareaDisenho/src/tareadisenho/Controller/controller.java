@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Model;
+package tareadisenho.Controller;
 
 import java.util.Collection;
 import tareadisenho.Controller.DTO;
@@ -12,7 +12,7 @@ import tareadisenho.Controller.DTO;
  *
  * @author Luis
  */
-public class controller {
+public class controller  {
     private String alfabeto;
 
     public String getAlfabeto() {
@@ -33,7 +33,7 @@ public class controller {
     }
     
     public void procesarPeticion(DTO datos){
-        
+        escribir(datos);
         
     
     }
@@ -49,14 +49,23 @@ public class controller {
         System.out.println("algoritmos cargados exitosamente");
     }
     
-    public void ejecutarAlgoritmos(){
-        System.out.println("ejecutando algoritmo(s) requerido(s)");
+    public void ejecutarAlgoritmos(DTO datos){
+        if(datos.isModo() == true){
+        /*for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
+            datos.getTipoAlgoritmo().get(x).;
+        }*/
+        }
+        else{
+        
+        }
+        
+        //System.out.println("ejecutando algoritmo(s) requerido(s)");
     }
     
-    public void escribir(DTO datos){
-    TXT escritor = new TXT();
-    escritor.escribir(datos);
-    System.out.println("txt escrito exitosamente");
+    public void escribir(DTO datos){ 
+        for(int x = 0; x < datos.getTipoSalida().size(); x++){
+            datos.getTipoSalida().get(x).escribir(datos);
+        }
     }
     
 }

@@ -6,9 +6,11 @@
 package tareadisenho;
 
 import tareadisenho.Controller.DTO;
-import tareadisenho.Model.controller;
+import tareadisenho.Controller.controller;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Collection;
+import tareadisenho.Model.IPersistencia;
 
 /**
  *
@@ -203,7 +205,7 @@ public class GUI extends javax.swing.JFrame {
     ArrayList algoritmos = new ArrayList();
     algoritmos.addAll(jlAlgoritmos1.getSelectedValuesList());
     ArrayList salidas = new ArrayList();
-    salidas.addAll(jlSalidas.getSelectedValuesList());
+    salidas.addAll((Collection) (IPersistencia) jlSalidas.getSelectedValuesList());
     
     cbAlfabeto.getSelectedItem().toString();
     
@@ -216,6 +218,7 @@ public class GUI extends javax.swing.JFrame {
     midto.setFrase(tfFrase.getText());
     midto.setModo(cbModoCodificacion.isSelected());
     
+    cont.procesarPeticion(midto);
     
     
     //System.out.println();

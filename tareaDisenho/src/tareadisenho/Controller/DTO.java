@@ -6,6 +6,8 @@
 package tareadisenho.Controller;
 
 import java.util.ArrayList;
+import tareadisenho.Model.Algoritmo;
+import tareadisenho.Model.IPersistencia;
 
 /**
  *
@@ -16,8 +18,8 @@ public class DTO {
     private ArrayList<String> alfabeto;
     private String frase;
     private boolean modo;
-    private ArrayList<String> tipoAlgoritmo;
-    private ArrayList<String> tipoSalida;
+    private ArrayList<Algoritmo> tipoAlgoritmo;
+    private ArrayList<IPersistencia> tipoSalida;
     private ArrayList<String> resultados;
 
     
@@ -38,11 +40,11 @@ public class DTO {
         return modo;
     }
 
-    public ArrayList<String> getTipoAlgoritmo() {
+    public ArrayList<Algoritmo> getTipoAlgoritmo() {
         return tipoAlgoritmo;
     }
 
-    public ArrayList<String> getTipoSalida() {
+    public ArrayList<IPersistencia> getTipoSalida() {
         return tipoSalida;
     }
 
@@ -67,11 +69,11 @@ public class DTO {
         this.modo = modo;
     }
 
-    public void setTipoAlgoritmo(ArrayList<String> tipoAlgoritmo) {
+    public void setTipoAlgoritmo(ArrayList<Algoritmo> tipoAlgoritmo) {
         this.tipoAlgoritmo = tipoAlgoritmo;
     }
 
-    public void setTipoSalida(ArrayList<String> tipoSalida) {
+    public void setTipoSalida(ArrayList<IPersistencia> tipoSalida) {
         this.tipoSalida = tipoSalida;
     }
 
