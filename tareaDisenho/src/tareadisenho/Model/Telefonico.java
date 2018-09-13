@@ -18,7 +18,13 @@ public class Telefonico extends Algoritmo{
         System.out.println("Clase Telefonico, método Codificar. Codifica una frase según los datos que recibe en el dto");
     }
     @Override
-    protected void decodificar(DTO dto){
+    public void decodificar(DTO dto){
         System.out.println("Clase Telefonico, método Decodificar. Decodifica una frase según los datos que recibe en el dto");
     }
+    
+    @Override
+    public String toString(){
+        return "Telefonico";
+    }
+    
 }

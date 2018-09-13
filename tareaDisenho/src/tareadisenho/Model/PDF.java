@@ -18,4 +18,9 @@ public class PDF implements IPersistencia {
         System.out.println("Aqui se creara un documento PDF como salida");
     }
     
+    @Override
+    public String toString(){
+        return "PDF";
+    }
+    
 }

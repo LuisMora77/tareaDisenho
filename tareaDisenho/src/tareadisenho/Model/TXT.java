@@ -20,19 +20,20 @@ public class TXT implements IPersistencia {
      @Override
     public void escribir(DTO datos) {
         try{
+            System.out.println("Creando txt");
             BufferedWriter archivo = new BufferedWriter(new FileWriter("bitacora.txt"));
             String timeLog = new SimpleDateFormat("dd:MM:yyyy HH:mm:ss").format(Calendar.getInstance().getTime());
             archivo.write("Fecha de Peticion: " + timeLog);
             archivo.newLine();
             archivo.write("Frase original: " + datos.getFrase());
             archivo.newLine();
-            archivo.write("Resultados: ");
+            archivo.write("Resultados: " + "Resultado de la frase " + datos.getFrase() + " al aplicarle el algoritmo seleccionado ");
             archivo.newLine();
             archivo.newLine();
             for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
-                archivo.write("\t" + "Metodo: " + datos.getTipoAlgoritmo().get(x));
+                archivo.write("Metodo: " + datos.getTipoAlgoritmo().get(x));
                 archivo.newLine();
-                archivo.write("\t" + "Forma: " + datos.getTipoSalida().get(x));
+                archivo.write("Forma: " + datos.getTipoSalida().get(x));
                 archivo.newLine();
                 archivo.newLine();
             }
@@ -42,6 +43,11 @@ public class TXT implements IPersistencia {
         catch(Exception e){
             System.out.println("Se encontro un error");
         }
+    }
+    
+     @Override
+    public String toString(){
+        return "TXT";
     }
     
 }

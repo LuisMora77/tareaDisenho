@@ -10,19 +10,41 @@ import tareadisenho.Controller.controller;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
+import javax.swing.DefaultListModel;
 import tareadisenho.Model.IPersistencia;
+import tareadisenho.Model.PDF;
+import tareadisenho.Model.Substitucion;
+import tareadisenho.Model.TXT;
+import tareadisenho.Model.Telefonico;
+import tareadisenho.Model.Transposicion;
+import tareadisenho.Model.XML;
 
 /**
  *
  * @author Luis
  */
 public class GUI extends javax.swing.JFrame {
+DefaultListModel modelSalidas = new DefaultListModel();
+DefaultListModel modelAlgoritmos = new DefaultListModel();
 
     /**
      * Creates new form GUI
      */
     public GUI() {
         initComponents();
+        modelSalidas.addElement(new TXT()); // IMPORTANTE, ESTO HAY QUE CAMBIAR ESTO
+        modelSalidas.addElement(new PDF()); 
+        modelSalidas.addElement(new XML());
+        jlSalidas.setModel(modelSalidas);
+        
+        
+        modelAlgoritmos.addElement(new Substitucion());
+        modelAlgoritmos.addElement(new Transposicion());
+        modelAlgoritmos.addElement(new Telefonico());
+        
+        jlAlgoritmos1.setModel(modelAlgoritmos);
+        
+        taResultado.setEditable(false);
     }
 
     /**
@@ -48,7 +70,7 @@ public class GUI extends javax.swing.JFrame {
         cbModoCodificacion = new javax.swing.JCheckBox();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        taResultado = new javax.swing.JTextArea();
         buttonRealizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -70,22 +92,12 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jlSalidas.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "PDF", "XML", "TXT" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane2.setViewportView(jlSalidas);
 
         jLabel3.setText("Seleccione el/los algoritmo(s) que desea aplicar a la frase:");
 
         jLabel4.setText("Seleccione la(s) salida(s) requerida(s):");
 
-        jlAlgoritmos1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Telefonico", "Transposicion", "Substitucion" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         jScrollPane3.setViewportView(jlAlgoritmos1);
 
         cbModoCodificacion.setText("Decodificar");
@@ -97,9 +109,9 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel5.setText("Seleccione la(s) salida(s) requerida(s):");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        taResultado.setColumns(20);
+        taResultado.setRows(5);
+        jScrollPane1.setViewportView(taResultado);
 
         buttonRealizar.setText("Realizar peticion");
         buttonRealizar.addActionListener(new java.awt.event.ActionListener() {
@@ -205,8 +217,7 @@ public class GUI extends javax.swing.JFrame {
     ArrayList algoritmos = new ArrayList();
     algoritmos.addAll(jlAlgoritmos1.getSelectedValuesList());
     ArrayList salidas = new ArrayList();
-    salidas.addAll((Collection) (IPersistencia) jlSalidas.getSelectedValuesList());
-    
+    salidas.addAll(jlSalidas.getSelectedValuesList());
     cbAlfabeto.getSelectedItem().toString();
     
     
@@ -221,7 +232,8 @@ public class GUI extends javax.swing.JFrame {
     cont.procesarPeticion(midto);
     
     
-    //System.out.println();
+    
+  
 
 
    
@@ -280,9 +292,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JList<String> jlAlgoritmos1;
     private javax.swing.JList<String> jlSalidas;
+    private javax.swing.JTextArea taResultado;
     private javax.swing.JTextField tfFrase;
     // End of variables declaration//GEN-END:variables
 }

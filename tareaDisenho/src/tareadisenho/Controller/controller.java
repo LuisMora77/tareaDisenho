@@ -7,6 +7,7 @@ package tareadisenho.Controller;
 
 import java.util.Collection;
 import tareadisenho.Controller.DTO;
+import tareadisenho.Model.IPersistencia;
 
 /**
  *
@@ -33,7 +34,9 @@ public class controller  {
     }
     
     public void procesarPeticion(DTO datos){
+        ejecutarAlgoritmos(datos);
         escribir(datos);
+        
         
     
     }
@@ -50,21 +53,21 @@ public class controller  {
     }
     
     public void ejecutarAlgoritmos(DTO datos){
-        if(datos.isModo() == true){
-        /*for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
-            datos.getTipoAlgoritmo().get(x).;
-        }*/
+        if(datos.isModo() == false){
+        for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
+            datos.getTipoAlgoritmo().get(x).codificar(datos);
+        }
         }
         else{
-        
+        for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
+            datos.getTipoAlgoritmo().get(x).decodificar(datos);
         }
-        
-        //System.out.println("ejecutando algoritmo(s) requerido(s)");
+        }
     }
     
     public void escribir(DTO datos){ 
         for(int x = 0; x < datos.getTipoSalida().size(); x++){
-            datos.getTipoSalida().get(x).escribir(datos);
+           datos.getTipoSalida().get(x).escribir(datos);
         }
     }
     

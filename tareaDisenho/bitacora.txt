@@ -1,0 +1,7 @@
+Fecha de Peticion: 12:09:2018 23:23:36
+Frase original: df
+Resultados: Resultado de la frase df al aplicarle el algoritmo seleccionado 
+
+Metodo: Substitucion
+Forma: TXT
+

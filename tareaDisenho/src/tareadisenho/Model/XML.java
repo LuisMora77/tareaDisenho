@@ -18,4 +18,9 @@ public class XML implements IPersistencia{
         System.out.println("Aca se creara un XML como salida");
     }
     
+    @Override
+    public String toString(){
+        return "XML";
+    }
+    
 }

@@ -153,11 +153,7 @@
             <Component class="javax.swing.JList" name="jlSalidas">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="PDF"/>
-                    <StringItem index="1" value="XML"/>
-                    <StringItem index="2" value="TXT"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -186,11 +182,7 @@
             <Component class="javax.swing.JList" name="jlAlgoritmos1">
               <Properties>
                 <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="3">
-                    <StringItem index="0" value="Telefonico"/>
-                    <StringItem index="1" value="Transposicion"/>
-                    <StringItem index="2" value="Substitucion"/>
-                  </StringArray>
+                  <StringArray count="0"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -219,7 +211,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="taResultado">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>

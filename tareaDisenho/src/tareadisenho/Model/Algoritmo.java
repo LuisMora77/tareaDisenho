@@ -13,11 +13,11 @@ import tareadisenho.Controller.DTO;
  */
 public class Algoritmo {
     
-    protected void codificar(DTO dto){
+    public void codificar(DTO dto){
         System.out.println("Clase Algoritmo, método Codificar. Básicamente, acá no debería entrar");
     }
     
-    protected void decodificar(DTO dto){
+    public void decodificar(DTO dto){
         System.out.println("Clase Algoritmo, método Decodificar. Básicamente, acá no debería entrar");
     }
     
