@@ -34,6 +34,7 @@ public class controller  {
     }
     
     public void procesarPeticion(DTO datos){
+        validar(datos);
         ejecutarAlgoritmos(datos);
         escribir(datos);
         
@@ -45,7 +46,7 @@ public class controller  {
     public void actualizarAlfabeto(DTO datos){}
     
     public void validar(DTO datos){
-    
+        System.out.println("\n\n\nDatos validados exitosamente");
     }
     
     public void CargarAlgoritmos(){

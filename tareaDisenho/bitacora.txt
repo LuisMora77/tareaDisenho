@@ -1,7 +1,7 @@
-Fecha de Peticion: 12:09:2018 23:23:36
-Frase original: df
-Resultados: Resultado de la frase df al aplicarle el algoritmo seleccionado 
+Fecha de Peticion: 13:09:2018 00:43:54
+Frase original: yass
+Resultados: Resultado de la frase yass al aplicarle el algoritmo seleccionado 
 
-Metodo: Substitucion
+Metodo: Transposicion
 Forma: TXT
 

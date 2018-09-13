@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import tareadisenho.Controller.DTO;
 import tareadisenho.GUI;
@@ -36,17 +37,26 @@ public class TareaDisenho {
         //System.out.println(cont.getAlfabeto())
         ventana.setVisible(true);
         
-        System.out.println("\n\nBienvenido/a al programa de codificacion y decodificacion\n\n");
-        System.out.println("A continuacion se presentan las opciones disponibles:\n\n");
+        ArrayList algoritmos = new ArrayList();
+        ArrayList salidas = new ArrayList();
+        
+        
+        
+        System.out.println("\n\nBienvenido/a al programa de codificacion y decodificacion\n");
+        System.out.println("A continuacion se presentan las opciones disponibles:\n");
         
         
         
         System.out.println("Nombre del alfabeto que desea utilizar: ");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         mydto.setNombreAlfabeto(br.readLine());
-        System.out.println(mydto.getNombreAlfabeto());
         
         System.out.println("Ingrese la frase que desea convertir: ");
+        mydto.setFrase(br.readLine());
+        System.out.println("Ingrese el algoritmo que desea aplicar: ");
+ 
+        
+        
         
         
         
