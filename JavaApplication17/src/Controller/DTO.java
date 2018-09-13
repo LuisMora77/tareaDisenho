@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Controller;
+package tareadisenho;
 
 import java.util.ArrayList;
 
 /**
  *
- * @author Monserrath
+ * @author Luis
  */
 public class DTO {
     private String nombreAlfabeto;
@@ -20,15 +20,7 @@ public class DTO {
     private ArrayList<String> tipoSalida;
     private ArrayList<String> resultados;
 
-    public DTO(String nombreAlfabeto, ArrayList<String> alfabeto, String frase, boolean modo, ArrayList<String> tipoAlgoritmo, ArrayList<String> tipoSalida, ArrayList<String> resultados) {
-        this.nombreAlfabeto = nombreAlfabeto;
-        this.alfabeto = alfabeto;
-        this.frase = frase;
-        this.modo = modo;
-        this.tipoAlgoritmo = tipoAlgoritmo;
-        this.tipoSalida = tipoSalida;
-        this.resultados = resultados;
-    }
+    
 
     public String getNombreAlfabeto() {
         return nombreAlfabeto;
@@ -64,6 +56,7 @@ public class DTO {
 
     public void setAlfabeto(ArrayList<String> alfabeto) {
         this.alfabeto = alfabeto;
+      
     }
 
     public void setFrase(String frase) {
@@ -85,5 +78,6 @@ public class DTO {
     public void setResultados(ArrayList<String> resultados) {
         this.resultados = resultados;
     }
+    
     
 }
