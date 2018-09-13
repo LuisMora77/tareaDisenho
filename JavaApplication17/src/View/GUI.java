@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho;
+package View;
 
+import Controller.DTO;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import Controller.controller;
 
 /**
  *
@@ -216,7 +218,7 @@ public class GUI extends javax.swing.JFrame {
     
     
     
-    //System.out.println();
+    System.out.println(midto.getTipoAlgoritmo());
    
     
     
