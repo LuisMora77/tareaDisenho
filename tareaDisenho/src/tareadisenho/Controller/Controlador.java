@@ -7,6 +7,7 @@ package tareadisenho.Controller;
 
 import java.util.Collection;
 import tareadisenho.Controller.DTO;
+import tareadisenho.Model.Alfabeto;
 import tareadisenho.Model.IPersistencia;
 
 /**
@@ -14,23 +15,20 @@ import tareadisenho.Model.IPersistencia;
  * @author Luis
  */
 public class Controlador  {
-    private String alfabeto;
-
-    public String getAlfabeto() {
-        return alfabeto;
-    }
-
-    public void setAlfabeto(String alfabeto) {
-        this.alfabeto = alfabeto;
+    private Alfabeto alfabeto;
+    private DAOAlfabetos dbalfabetos;
+    
+    public Controlador(){
+        this.dbalfabetos = new DAOAlfabetos();
     }
     
-    public void predefinirAlfabeto(){
-        setAlfabeto("abcdefghijklmnopqrstuvwxyz");
-        System.out.println("Clase Controller, metodo PredefinirAlfabeto. Solicita el alfabeto (default) al controlador");
+    public void predefinirAlfabeto(DTO dto){
+        System.out.println("Clase Controller, metodo PredefinirAlfabeto. Solicita cargar el alfabeto al controlador");
+        dbalfabetos.getAlfabeto(dto.getNombreAlfabeto());
     }
     
     public void cargarAlfabetos(){
-        System.out.println("Clase Controller, metodo CargarAlfabetos. Carga el alfabeto (default) al controlador");
+        System.out.println("Clase Controller, metodo CargarAlfabetos. Solicita los nombres de los alfabetos disponibles");
     }
     
     public void procesarPeticion(DTO datos){
@@ -47,7 +45,7 @@ public class Controlador  {
     public void agregarAlfabeto(DTO datos){}
     public void actualizarAlfabeto(DTO datos){}
     
-    public void validar(DTO datos){
+    private void validar(DTO datos){
         System.out.println("Clase Controller, metodo Validar. Le solicita al alfabeto que valide una frase para luego poder ejecutar los algoritmos");
     }
     
@@ -55,7 +53,7 @@ public class Controlador  {
         System.out.println("Clase Controller, metodo CargarAlgoritmos. Le regresa a la vista el nombre de aquellos algoritmos disponibles");
     }
     
-    public void ejecutarAlgoritmos(DTO datos){
+    private void ejecutarAlgoritmos(DTO datos){
         System.out.println("Clase Controller, metodo EjecutarAlgoritmos. Llama a los algoritmos de codificación o descodificación");
         if(datos.isModo() == false){
             for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
@@ -69,7 +67,7 @@ public class Controlador  {
         }
     }
     
-    public void escribir(DTO datos){
+    private void escribir(DTO datos){
         System.out.println("Clase Controller, metodo Escribir. Solicita la generación y guardado de las bitácoras respectivas");
         for(int x = 0; x < datos.getTipoSalida().size(); x++){
            datos.getTipoSalida().get(x).escribir(datos);
