@@ -5,7 +5,7 @@
  */
 package tareadisenho.Model;
 
-import tareadisenho.Controller.controller;
+import tareadisenho.Controller.Controlador;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -29,7 +29,7 @@ public class TareaDisenho {
         // TODO code application logic here
         
         GUI ventana = new GUI();
-        controller cont = new controller();
+        Controlador cont = new Controlador();
         DTO mydto = new DTO();
         cont.predefinirAlfabeto();
         cont.cargarAlfabetos();

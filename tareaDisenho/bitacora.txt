@@ -1,7 +1,0 @@
-Fecha de Peticion: 13:09:2018 00:43:54
-Frase original: yass
-Resultados: Resultado de la frase yass al aplicarle el algoritmo seleccionado 
-
-Metodo: Transposicion
-Forma: TXT
-

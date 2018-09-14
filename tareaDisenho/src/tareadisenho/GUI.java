@@ -6,7 +6,7 @@
 package tareadisenho;
 
 import tareadisenho.Controller.DTO;
-import tareadisenho.Controller.controller;
+import tareadisenho.Controller.Controlador;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -213,7 +213,7 @@ DefaultListModel modelAlgoritmos = new DefaultListModel();
     }//GEN-LAST:event_cbAlfabetoActionPerformed
 
     private void buttonRealizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRealizarActionPerformed
-    controller cont = new controller();
+    Controlador cont = new Controlador();
     ArrayList algoritmos = new ArrayList();
     algoritmos.addAll(jlAlgoritmos1.getSelectedValuesList());
     ArrayList salidas = new ArrayList();

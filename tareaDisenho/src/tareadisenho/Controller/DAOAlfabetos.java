@@ -14,28 +14,28 @@ import java.util.Collection;
 public class DAOAlfabetos {
     
     public void actualizar(){
-        System.out.println("datos actualizados");
+        System.out.println("Clase DAOAlfabetos, metodo Actualizar. Actualiza los datos de un alfabeto");
     }
     public void crear(){
-    System.out.println("datos creados");
+        System.out.println("Clase DAOAlfabetos, metodo Crear. Crea un alfabeto");
     };
     
     public void insertar(){
-    System.out.println("datos instertados");
+        System.out.println("Clase DAOAlfabetos, metodo Insertar. Inserta los datos de un alfabeto");
     }
     
     public void eliminar(){
-    System.out.println("datos eliminados");
+        System.out.println("Clase DAOAlfabetos, metodo Eliminar. Elimina un alfabeto");
     };
     
     public boolean validar(DTO datos){
-        System.out.println("datos validados correctamente");
+        System.out.println("Clase DAOAlfabetos, metodo Validar. Valida que un nuevo alfabeto pueda ser guardado");
         return true;
     }
-    /*
+    
     public Collection getAlfabetos(){
-        System.out.println("alfabetos obtenidos con exito");
-        return coleccion;
+        System.out.println("Clase DAOAlfabetos, metodo GetAlfabetos. Carga todos los nombres de alfabetos disponibles");
+        return null;
     }
-    */
+    
 }

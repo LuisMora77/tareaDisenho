@@ -22,7 +22,9 @@ public class DTO {
     private ArrayList<IPersistencia> tipoSalida;
     private ArrayList<String> resultados;
 
-    
+    public DTO(){
+        this.resultados = new ArrayList<>();
+    }
 
     public String getNombreAlfabeto() {
         return nombreAlfabeto;
