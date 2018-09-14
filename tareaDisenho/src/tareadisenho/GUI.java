@@ -231,14 +231,14 @@ DefaultListModel modelAlgoritmos = new DefaultListModel();
     
     cont.procesarPeticion(midto);
     
-    
-    
-  
-
-
-   
-    
-    
+    try {
+        for (int i=0; i<midto.getResultados().size(); i++){
+            taResultado.append("Resultado de ejecutar el/los algortimos:\n");
+            taResultado.append(midto.getResultados().get(i) + "\n");
+        }
+    } catch (Exception e){
+        taResultado.append("Error al ejecutar el/los algortimos");
+    }
 
     //midto.getTipoAlgoritmo().add(jlAlgoritmos1.getSelectedValue());
 // TODO add your handling code here:
