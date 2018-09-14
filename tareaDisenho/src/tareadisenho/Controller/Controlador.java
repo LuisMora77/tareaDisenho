@@ -15,7 +15,7 @@ import tareadisenho.Model.IPersistencia;
  * @author Luis
  */
 public class Controlador  {
-    private Alfabeto alfabeto;
+    private Alfabeto alfabetoActual;
     private DAOAlfabetos dbalfabetos;
     
     public Controlador(){
@@ -24,11 +24,12 @@ public class Controlador  {
     
     public void predefinirAlfabeto(DTO dto){
         System.out.println("Clase Controller, metodo PredefinirAlfabeto. Solicita cargar el alfabeto al controlador");
-        dbalfabetos.getAlfabeto(dto.getNombreAlfabeto());
+        this.alfabetoActual = dbalfabetos.getAlfabeto(dto.getNombreAlfabeto());
     }
     
-    public void cargarAlfabetos(){
+    public Collection cargarAlfabetos(){
         System.out.println("Clase Controller, metodo CargarAlfabetos. Solicita los nombres de los alfabetos disponibles");
+        return dbalfabetos.getAlfabetos();
     }
     
     public void procesarPeticion(DTO datos){
@@ -45,8 +46,9 @@ public class Controlador  {
     public void agregarAlfabeto(DTO datos){}
     public void actualizarAlfabeto(DTO datos){}
     
-    private void validar(DTO datos){
+    private boolean validar(DTO datos){
         System.out.println("Clase Controller, metodo Validar. Le solicita al alfabeto que valide una frase para luego poder ejecutar los algoritmos");
+        return alfabetoActual.validar(datos.getFrase());
     }
     
     public void CargarAlgoritmos(){
