@@ -6,6 +6,7 @@
 package tareadisenho.Controller;
 
 import java.util.Collection;
+import tareadisenho.Model.Alfabeto;
 
 /**
  *
@@ -20,15 +21,11 @@ public class DAOAlfabetos {
         System.out.println("Clase DAOAlfabetos, metodo Crear. Crea un alfabeto");
     };
     
-    public void insertar(){
-        System.out.println("Clase DAOAlfabetos, metodo Insertar. Inserta los datos de un alfabeto");
-    }
-    
     public void eliminar(){
         System.out.println("Clase DAOAlfabetos, metodo Eliminar. Elimina un alfabeto");
     };
     
-    public boolean validar(DTO datos){
+    private boolean validar(DTO datos){
         System.out.println("Clase DAOAlfabetos, metodo Validar. Valida que un nuevo alfabeto pueda ser guardado");
         return true;
     }
@@ -38,4 +35,8 @@ public class DAOAlfabetos {
         return null;
     }
     
+    public Alfabeto getAlfabeto(String nombre){
+        System.out.println("Clase DAOAlfabetos, metodo GetAlfabeto. Carga el alfabeto con el que trabajará el usuario");
+        return null;        
+    }
 }
