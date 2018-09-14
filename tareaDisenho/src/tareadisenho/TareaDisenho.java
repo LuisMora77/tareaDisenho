@@ -15,6 +15,12 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import tareadisenho.Controller.DTO;
 import tareadisenho.GUI;
+import tareadisenho.Model.PDF;
+import tareadisenho.Model.Substitucion;
+import tareadisenho.Model.TXT;
+import tareadisenho.Model.Telefonico;
+import tareadisenho.Model.Transposicion;
+import tareadisenho.Model.XML;
 
 /**
  *
@@ -54,22 +60,79 @@ public class TareaDisenho {
         System.out.println("Ingrese la frase que desea convertir: ");
         mydto.setFrase(br.readLine());
         System.out.println("Ingrese el algoritmo que desea aplicar: ");
+        Boolean bandera = true;
+        while(bandera){
+            String entrada = br.readLine();
+            switch (entrada){
+                    case "Substitucion":
+                        algoritmos.add(new Substitucion());
+                        break;
+                    case "Telefonico":
+                        algoritmos.add(new Telefonico());
+                        break;
+                    case "Transposicion":
+                        algoritmos.add(new Transposicion());
+                        break;
+                    case "n":
+                        bandera = false;
+                        break;
+                    default:
+                        System.out.println("Opción inválida");
+            }
+            System.out.println("Desea pedir otro algoritmo (ingrese 'n' para No): ");
+        }
+        
+        System.out.println("Ingrese el método de guardado a aplicar: ");
+        bandera = true;
+        while(bandera){
+            String entrada = br.readLine();
+            switch (entrada){
+                    case "TXT":
+                        salidas.add(new TXT());
+                        break;
+                    case "PDF":
+                        salidas.add(new PDF());
+                        break;
+                    case "XML":
+                        salidas.add(new XML());
+                        break;
+                    case "n":
+                        bandera = false;
+                        break;
+                    default:
+                        System.out.println("Opción inválida");
+            }
+            System.out.println("Desea habilitar otro método de guardado (ingrese 'n' para No): ");
+        }
+        
+        System.out.println("Desea codificar o descodificar: ");
+        String entrada = br.readLine();
+        switch (entrada){
+            case "codificar":
+                bandera = false;
+                break;
+            case "decodificar":
+                bandera = true;
+                break;
+        }            
  
         
-        
-        
-        
-        
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
+        mydto.setTipoAlgoritmo(algoritmos);
+        mydto.setTipoSalida(salidas);
+        mydto.setModo(bandera);
+    
         System.out.println("");
         System.out.println("");
         System.out.println("");
         
+        cont.predefinirAlfabeto(mydto);
+        cont.procesarPeticion(mydto);
+
+        System.out.println("");
         
+        for (int i=0; i<mydto.getResultados().size(); i++){
+            System.out.println(mydto.getResultados().get(i));
+        }
     }
     
 }
