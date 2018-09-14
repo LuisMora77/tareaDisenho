@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Model;
+package tareadisenho;
 
 import tareadisenho.Controller.Controlador;
 import java.io.BufferedReader;

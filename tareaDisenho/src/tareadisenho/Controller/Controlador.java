@@ -48,6 +48,7 @@ public class Controlador  {
     
     private boolean validar(DTO datos){
         System.out.println("Clase Controller, metodo Validar. Le solicita al alfabeto que valide una frase para luego poder ejecutar los algoritmos");
+        
         return alfabetoActual.validar(datos.getFrase());
     }
     
