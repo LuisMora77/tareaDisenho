@@ -221,7 +221,6 @@ DefaultListModel modelAlgoritmos = new DefaultListModel();
     cbAlfabeto.getSelectedItem().toString();
     
     
-    
     DTO midto = new DTO();
     midto.setTipoAlgoritmo(algoritmos);
     midto.setTipoSalida(salidas);
@@ -229,11 +228,13 @@ DefaultListModel modelAlgoritmos = new DefaultListModel();
     midto.setFrase(tfFrase.getText());
     midto.setModo(cbModoCodificacion.isSelected());
     
+    cont.predefinirAlfabeto(midto);
+    System.out.println("mmm");
     cont.procesarPeticion(midto);
     
     try {
+        taResultado.append("Resultado de ejecutar el/los algortimos:\n");
         for (int i=0; i<midto.getResultados().size(); i++){
-            taResultado.append("Resultado de ejecutar el/los algortimos:\n");
             taResultado.append(midto.getResultados().get(i) + "\n");
         }
     } catch (Exception e){

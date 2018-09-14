@@ -5,6 +5,8 @@
  */
 package tareadisenho.Controller;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import tareadisenho.Model.Alfabeto;
 
@@ -37,6 +39,9 @@ public class DAOAlfabetos {
     
     public Alfabeto getAlfabeto(String nombre){
         System.out.println("Clase DAOAlfabetos, metodo GetAlfabeto. Carga el alfabeto con el que trabajará el usuario");
-        return null;        
+        ArrayList<String> alf = new ArrayList<>(Arrays.asList(new String[]{"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"}));
+        Alfabeto alfabeto = new Alfabeto("default",alf);
+        
+        return alfabeto;        
     }
 }

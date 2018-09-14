@@ -15,7 +15,7 @@ public class PDF implements IPersistencia {
     
     @Override
     public void escribir(DTO datos) {
-        System.out.println("Aqui se creara un documento PDF como salida");
+        System.out.println("Clase PDF, método Escribir. Aqui se creara un documento PDF como salida");
     }
     
     @Override

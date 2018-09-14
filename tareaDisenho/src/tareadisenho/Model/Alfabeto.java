@@ -14,13 +14,35 @@ import tareadisenho.Controller.IValidable;
  */
 public class Alfabeto implements IValidable {
     
-    String nombre;
-    ArrayList<String> alfabeto;
+    private String nombre;
+    private ArrayList<String> alfabeto;
+    
+    public Alfabeto(String nom, ArrayList<String> alf){
+        this.nombre = nom;
+        this.alfabeto = alf;
+    }
     
     @Override
     public boolean validar (Object objeto){
         System.out.println("Clase Alfabeto, método Validar. Se verifica que la frase ingresada por el usuario sea compatible con el alfabeto activo");
         return true;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public ArrayList<String> getAlfabeto() {
+        return alfabeto;
+    }
+
+    public void setAlfabeto(ArrayList<String> alfabeto) {
+        this.alfabeto = alfabeto;
+    }
+    
     
 }

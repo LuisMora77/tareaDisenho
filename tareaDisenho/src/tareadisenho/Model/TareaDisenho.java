@@ -31,7 +31,7 @@ public class TareaDisenho {
         GUI ventana = new GUI();
         Controlador cont = new Controlador();
         DTO mydto = new DTO();
-        cont.predefinirAlfabeto();
+        cont.predefinirAlfabeto(mydto);
         cont.cargarAlfabetos();
         cont.CargarAlgoritmos();
         //System.out.println(cont.getAlfabeto())

@@ -15,7 +15,7 @@ public class XML implements IPersistencia{
     
     @Override
     public void escribir(DTO datos) {
-        System.out.println("Aca se creara un XML como salida");
+        System.out.println("Clase XML, método escribir. Aca se creara un XML como salida");
     }
     
     @Override
