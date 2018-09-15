@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Controller;
+package Controller;
 
 import java.util.ArrayList;
-import tareadisenho.Model.Algoritmo;
-import tareadisenho.Model.IPersistencia;
+import Model.Algoritmo;
+import Model.IPersistencia;
 
 /**
  *

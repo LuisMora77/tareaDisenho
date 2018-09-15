@@ -3,21 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho;
+package View;
 
-import tareadisenho.Controller.Controlador;
+import Controller.Controlador;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import tareadisenho.Controller.DTO;
-import tareadisenho.Model.PDF;
-import tareadisenho.Model.Substitucion;
-import tareadisenho.Model.TXT;
-import tareadisenho.Model.Telefonico;
-import tareadisenho.Model.Transposicion;
-import tareadisenho.Model.XML;
+import Controller.DTO;
+import Model.PDF;
+import Model.Substitucion;
+import Model.TXT;
+import Model.Telefonico;
+import Model.Transposicion;
+import Model.XML;
 
 /**
  *

@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Model;
+package Model;
 
 import java.util.ArrayList;
-import tareadisenho.Controller.IValidable;
+import Controller.IValidable;
 
 /**
  *

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Model;
+package Model;
 
-import tareadisenho.Controller.DTO;
+import Controller.DTO;
 
 /**
  *

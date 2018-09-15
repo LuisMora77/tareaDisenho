@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tareadisenho.Model;
+package Model;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import tareadisenho.Controller.DTO;
+import Controller.DTO;
 
 /**
  *
