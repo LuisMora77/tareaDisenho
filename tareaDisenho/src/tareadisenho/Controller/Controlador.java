@@ -6,9 +6,7 @@
 package tareadisenho.Controller;
 
 import java.util.Collection;
-import tareadisenho.Controller.DTO;
 import tareadisenho.Model.Alfabeto;
-import tareadisenho.Model.IPersistencia;
 
 /**
  *
@@ -39,7 +37,7 @@ public class Controlador  {
         System.out.println("    - Ejecuta los algoritmos");
         ejecutarAlgoritmos(datos);
         System.out.println("    - Guarda la bitácora");
-        escribir(datos);
+        escribirArchivo(datos);
         System.out.println("    - Termina de procesar la petición y regresa los datos");
     }
     
@@ -69,7 +67,7 @@ public class Controlador  {
         }
     }
     
-    private void escribir(DTO datos){
+    private void escribirArchivo(DTO datos){
         System.out.println("Clase Controller, metodo Escribir. Solicita la generación y guardado de las bitácoras respectivas");
         for(int x = 0; x < datos.getTipoSalida().size(); x++){
            datos.getTipoSalida().get(x).escribir(datos);

@@ -27,7 +27,7 @@ public class TXT implements IPersistencia {
             archivo.newLine();
             archivo.write("Frase original: " + datos.getFrase());
             archivo.newLine();
-            archivo.write("Resultados: " + "Resultado de la frase " + datos.getFrase() + " al aplicarle el algoritmo seleccionado ");
+            archivo.write("Resultados: " + "Resultado de la frase " + datos.getFrase() + " al aplicarle el/los algoritmo(s) seleccionado(s)  ");
             archivo.newLine();
             archivo.newLine();
             for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
