@@ -15,11 +15,13 @@ public class Substitucion extends Algoritmo{
     
     @Override
     public void codificar(DTO dto){
-        System.out.println("Clase Substitucion, método Codificar. Codifica una frase según los datos que recibe en el dto");
+        System.out.println("Clase Substitucion, método Codificar. "
+                + "Codifica una frase según los datos que recibe en el dto");
     }
     @Override
     public void decodificar(DTO dto){
-        System.out.println("Clase Substitucion, método Decodificar. Decodifica una frase según los datos que recibe en el dto");
+        System.out.println("Clase Substitucion, método Decodificar. "
+                + "Decodifica una frase según los datos que recibe en el dto");
     }
     
     @Override
