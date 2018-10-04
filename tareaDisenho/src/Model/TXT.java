@@ -31,7 +31,7 @@ public class TXT implements IPersistencia {
             archivo.newLine();
             archivo.newLine();
             for(int x = 0; x < datos.getTipoAlgoritmo().size(); x++){
-                archivo.write("Metodo: " + datos.getTipoAlgoritmo().get(x));
+                archivo.write("Metodo: " + datos.getTipoAlgoritmo().get(x).toString());
                 archivo.newLine();
                 archivo.write("Forma: " + datos.getTipoSalida().get(x));
                 archivo.newLine();
